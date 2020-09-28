@@ -12,7 +12,10 @@ export class MainComponent implements OnInit {
   constructor(private renderer: Renderer2) {}
 
   ngOnInit() {
-    this.renderer.removeClass(document.querySelector('app-root'), 'login-page');
+    this.renderer.removeClass(
+      document.querySelector('app-root'),
+      'login-page'
+    );
     this.renderer.removeClass(
       document.querySelector('app-root'),
       'register-page'

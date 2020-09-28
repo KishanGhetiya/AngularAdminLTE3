@@ -17,12 +17,12 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { ToastrModule } from 'ngx-toastr';
 import { MessagesDropdownMenuComponent } from './pages/main/header/messages-dropdown-menu/messages-dropdown-menu.component';
 import { NotificationsDropdownMenuComponent } from './pages/main/header/notifications-dropdown-menu/notifications-dropdown-menu.component';
+import { MenuRightSidebarComponent } from './pages/main/header/menu-right-sidebar/menu-right-sidebar.component';
+import { UserDropdownMenuComponent } from './pages/main/header/user-dropdown-menu/user-dropdown-menu.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppButtonComponent } from './components/app-button/app-button.component';
-
 import { registerLocaleData } from '@angular/common';
 import localeEn from '@angular/common/locales/en';
-import { UserDropdownMenuComponent } from './pages/main/header/user-dropdown-menu/user-dropdown-menu.component';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -42,6 +42,7 @@ registerLocaleData(localeEn, 'en-EN');
     NotificationsDropdownMenuComponent,
     AppButtonComponent,
     UserDropdownMenuComponent,
+    MenuRightSidebarComponent,
   ],
   imports: [
     BrowserModule,

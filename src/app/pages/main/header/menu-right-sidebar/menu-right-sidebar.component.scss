@@ -1,0 +1,24 @@
+.sidebar-show-bx {
+    right: 0;
+    display: block;
+    overflow: scroll;
+    position: absolute;
+    background: #343a40;
+    top: 57px;
+    height: calc(100vh - (7rem + 1px));
+    bottom: 57px;
+    min-height: 100%;
+}
+.sidebar-hide-bx {
+    display: none;
+}
+
+.colors-bx-display {
+    width: 40px;
+    height: 20px;
+    border-radius: 25px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    cursor: pointer;
+}
