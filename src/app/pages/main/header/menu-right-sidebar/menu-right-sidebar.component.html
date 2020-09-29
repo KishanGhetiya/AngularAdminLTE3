@@ -11,44 +11,49 @@
                 <h5>Customize AdminLTE</h5>
                 <hr class="mb-2">
                 <div class="mb-1">
-                    <input type="checkbox" value="1" class="mr-1">
-                    <span>No Navbar border</span></div>
+                    <input type="checkbox" class="mr-1" [checked]="isnavbarBorder" (change)="navbarBorder()">
+                    <span>No Navbar border</span>
+                </div>
                 <div class="mb-1">
-                    <input type="checkbox" value="1" class="mr-1">
-                    <span>Body small text</span></div>
+                    <input type="checkbox" class="mr-1" [checked]="isBodySmallText" (change)="bodySmallText()">
+                    <span>Body small text</span>
+                </div>
                 <div class="mb-1">
-                    <input type="checkbox" value="1" class="mr-1">
-                    <span>Navbar small text</span></div>
+                    <input type="checkbox" class="mr-1" [checked]="isNavbarSmallText" (change)="navbarSmallText()">
+                    <span>Navbar small text</span>
+                </div>
                 <div class="mb-1">
-                    <input type="checkbox" value="1" class="mr-1">
+                    <input type="checkbox" class="mr-1" [checked]="isSidebarNavSmallText" (change)="sidebarNavSmallText()">
                     <span>Sidebar nav small text</span>
                 </div>
                 <div class="mb-1">
-                    <input type="checkbox" value="1" class="mr-1">
-                    <span>Footer small text</span></div>
+                    <input type="checkbox" class="mr-1" [checked]="isFooterSmallText" (change)="footerSmallText()">
+                    <span>Footer small text</span>
+                </div>
                 <div class="mb-1">
-                    <input type="checkbox" value="1" class="mr-1">
+                    <input type="checkbox" class="mr-1" [checked]="isSidebarNavFlat" (change)="sidebarNavFlat()">
                     <span>Sidebar nav flat style</span>
                 </div>
                 <div class="mb-1">
-                    <input type="checkbox" value="1" class="mr-1">
+                    <input type="checkbox" class="mr-1" [checked]="isSidebarNavLegacy" (change)="sidebarNavLegacy()">
                     <span>Sidebar nav legacy style</span>
                 </div>
                 <div class="mb-1">
-                    <input type="checkbox" value="1" class="mr-1">
-                    <span>Sidebar nav compact</span></div>
+                    <input type="checkbox" class="mr-1" [checked]="isSidebarNavCompact" (change)="sidebarNavCompact()">
+                    <span>Sidebar nav compact</span>
+                </div>
                 <div class="mb-1">
-                    <input type="checkbox" value="1" class="mr-1">
+                    <input type="checkbox" class="mr-1" [checked]="isSidebarNavChildIndent" (change)="sidebarNavChildIndent()">
                     <span>Sidebar nav child indent</span>
                 </div>
                 <div class="mb-1">
-                    <input type="checkbox" value="1" class="mr-1">
-                    <span>Main Sidebar disable hover/focus
-                        auto
-                        expand</span></div>
+                    <input type="checkbox" class="mr-1" [checked]="isMainSidebarDisable" (change)="mainSidebarDisable()">
+                    <span>Main Sidebar disable hover/focus auto expand</span>
+                </div>
                 <div class="mb-4">
-                    <input type="checkbox" value="1" class="mr-1">
-                    <span>Brand small text</span></div>
+                    <input type="checkbox" class="mr-1" [checked]="isBrandSmallText" (change)="brandSmallText()">
+                    <span>Brand small text</span>
+                </div>
                 <h6>Navbar Variants</h6>
                 <div class="d-flex">
                     <div class="d-flex flex-wrap mb-3">
@@ -95,109 +100,109 @@
                 <h6>Accent Color Variants</h6>
                 <div class="d-flex"></div>
                 <div class="d-flex flex-wrap mb-3">
-                    <div (click)="bgColor('bg-primary')" class="bg-primary elevation-2 colors-bx-display">
+                    <div (click)="accentColor('bg-primary')" class="bg-primary elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-warning')" class="bg-warning elevation-2 colors-bx-display">
+                    <div (click)="accentColor('bg-warning')" class="bg-warning elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-info')" class="bg-info elevation-2 colors-bx-display">
+                    <div (click)="accentColor('bg-info')" class="bg-info elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-danger')" class="bg-danger elevation-2 colors-bx-display">
+                    <div (click)="accentColor('bg-danger')" class="bg-danger elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-success')" class="bg-success elevation-2 colors-bx-display">
+                    <div (click)="accentColor('bg-success')" class="bg-success elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-indigo')" class="bg-indigo elevation-2 colors-bx-display">
+                    <div (click)="accentColor('bg-indigo')" class="bg-indigo elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-lightblue')" class="bg-lightblue elevation-2 colors-bx-display">
+                    <div (click)="accentColor('bg-lightblue')" class="bg-lightblue elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-navy')" class="bg-navy elevation-2 colors-bx-display">
+                    <div (click)="accentColor('bg-navy')" class="bg-navy elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-purple')" class="bg-purple elevation-2 colors-bx-display">
+                    <div (click)="accentColor('bg-purple')" class="bg-purple elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-fuchsia')" class="bg-fuchsia elevation-2 colors-bx-display">
+                    <div (click)="accentColor('bg-fuchsia')" class="bg-fuchsia elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-pink')" class="bg-pink elevation-2 colors-bx-display">
+                    <div (click)="accentColor('bg-pink')" class="bg-pink elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-maroon')" class="bg-maroon elevation-2 colors-bx-display">
+                    <div (click)="accentColor('bg-maroon')" class="bg-maroon elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-orange')" class="bg-orange elevation-2 colors-bx-display">
+                    <div (click)="accentColor('bg-orange')" class="bg-orange elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-lime')" class="bg-lime elevation-2 colors-bx-display">
+                    <div (click)="accentColor('bg-lime')" class="bg-lime elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-teal')" class="bg-teal elevation-2 colors-bx-display">
+                    <div (click)="accentColor('bg-teal')" class="bg-teal elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-olive')" class="bg-olive elevation-2 colors-bx-display">
+                    <div (click)="accentColor('bg-olive')" class="bg-olive elevation-2 colors-bx-display">
                     </div>
                 </div>
                 <h6>Dark Sidebar Variants</h6>
                 <div class="d-flex"></div>
                 <div class="d-flex flex-wrap mb-3">
-                    <div (click)="bgColor('bg-primary')" class="bg-primary elevation-2 colors-bx-display">
+                    <div (click)="darkSideBarBgColor('bg-primary', 'bg-dark')" class="bg-primary elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-warning')" class="bg-warning elevation-2 colors-bx-display">
+                    <div (click)="darkSideBarBgColor('bg-warning', 'bg-dark')" class="bg-warning elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-info')" class="bg-info elevation-2 colors-bx-display">
+                    <div (click)="darkSideBarBgColor('bg-info', 'bg-dark')" class="bg-info elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-danger')" class="bg-danger elevation-2 colors-bx-display">
+                    <div (click)="darkSideBarBgColor('bg-danger', 'bg-dark')" class="bg-danger elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-success')" class="bg-success elevation-2 colors-bx-display">
+                    <div (click)="darkSideBarBgColor('bg-success', 'bg-dark')" class="bg-success elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-indigo')" class="bg-indigo elevation-2 colors-bx-display">
+                    <div (click)="darkSideBarBgColor('bg-indigo', 'bg-dark')" class="bg-indigo elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-lightblue')" class="bg-lightblue elevation-2 colors-bx-display">
+                    <div (click)="darkSideBarBgColor('bg-lightblue', 'bg-dark')" class="bg-lightblue elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-navy')" class="bg-navy elevation-2 colors-bx-display">
+                    <div (click)="darkSideBarBgColor('bg-navy', 'bg-dark')" class="bg-navy elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-purple')" class="bg-purple elevation-2 colors-bx-display">
+                    <div (click)="darkSideBarBgColor('bg-purple', 'bg-dark')" class="bg-purple elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-fuchsia')" class="bg-fuchsia elevation-2 colors-bx-display">
+                    <div (click)="darkSideBarBgColor('bg-fuchsia', 'bg-dark')" class="bg-fuchsia elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-pink')" class="bg-pink elevation-2 colors-bx-display">
+                    <div (click)="darkSideBarBgColor('bg-pink', 'bg-dark')" class="bg-pink elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-maroon')" class="bg-maroon elevation-2 colors-bx-display">
+                    <div (click)="darkSideBarBgColor('bg-maroon', 'bg-dark')" class="bg-maroon elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-orange')" class="bg-orange elevation-2 colors-bx-display">
+                    <div (click)="darkSideBarBgColor('bg-orange', 'bg-dark')" class="bg-orange elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-lime')" class="bg-lime elevation-2 colors-bx-display">
+                    <div (click)="darkSideBarBgColor('bg-lime', 'bg-dark')" class="bg-lime elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-teal')" class="bg-teal elevation-2 colors-bx-display">
+                    <div (click)="darkSideBarBgColor('bg-teal', 'bg-dark')" class="bg-teal elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-olive')" class="bg-olive elevation-2 colors-bx-display">
+                    <div (click)="darkSideBarBgColor('bg-olive', 'bg-dark')" class="bg-olive elevation-2 colors-bx-display">
                     </div>
                 </div>
                 <h6>Light Sidebar Variants</h6>
                 <div class="d-flex"></div>
                 <div class="d-flex flex-wrap mb-3">
-                    <div (click)="bgColor('bg-primary')" class="bg-primary elevation-2 colors-bx-display">
+                    <div (click)="lightSideBarBgColor('bg-primary', 'bg-light')" class="bg-primary elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-warning')" class="bg-warning elevation-2 colors-bx-display">
+                    <div (click)="lightSideBarBgColor('bg-warning', 'bg-light')" class="bg-warning elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-info')" class="bg-info elevation-2 colors-bx-display">
+                    <div (click)="lightSideBarBgColor('bg-info', 'bg-light')" class="bg-info elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-danger')" class="bg-danger elevation-2 colors-bx-display">
+                    <div (click)="lightSideBarBgColor('bg-danger', 'bg-light')" class="bg-danger elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-success')" class="bg-success elevation-2 colors-bx-display">
+                    <div (click)="lightSideBarBgColor('bg-success', 'bg-light')" class="bg-success elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-indigo')" class="bg-indigo elevation-2 colors-bx-display">
+                    <div (click)="lightSideBarBgColor('bg-indigo', 'bg-light')" class="bg-indigo elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-lightblue')" class="bg-lightblue elevation-2 colors-bx-display">
+                    <div (click)="lightSideBarBgColor('bg-lightblue', 'bg-light')" class="bg-lightblue elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-navy')" class="bg-navy elevation-2 colors-bx-display">
+                    <div (click)="lightSideBarBgColor('bg-navy', 'bg-light')" class="bg-navy elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-purple')" class="bg-purple elevation-2 colors-bx-display">
+                    <div (click)="lightSideBarBgColor('bg-purple', 'bg-light')" class="bg-purple elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-fuchsia')" class="bg-fuchsia elevation-2 colors-bx-display">
+                    <div (click)="lightSideBarBgColor('bg-fuchsia', 'bg-light')" class="bg-fuchsia elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-pink')" class="bg-pink elevation-2 colors-bx-display">
+                    <div (click)="lightSideBarBgColor('bg-pink', 'bg-light')" class="bg-pink elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-maroon')" class="bg-maroon elevation-2 colors-bx-display">
+                    <div (click)="lightSideBarBgColor('bg-maroon', 'bg-light')" class="bg-maroon elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-orange')" class="bg-orange elevation-2 colors-bx-display">
+                    <div (click)="lightSideBarBgColor('bg-orange', 'bg-light')" class="bg-orange elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-lime')" class="bg-lime elevation-2 colors-bx-display">
+                    <div (click)="lightSideBarBgColor('bg-lime', 'bg-light')" class="bg-lime elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-teal')" class="bg-teal elevation-2 colors-bx-display">
+                    <div (click)="lightSideBarBgColor('bg-teal', 'bg-light')" class="bg-teal elevation-2 colors-bx-display">
                     </div>
-                    <div (click)="bgColor('bg-olive')" class="bg-olive elevation-2 colors-bx-display">
+                    <div (click)="lightSideBarBgColor('bg-olive', 'bg-light')" class="bg-olive elevation-2 colors-bx-display">
                     </div>
                 </div>
                 <h6>Brand Logo Variants</h6>
@@ -241,7 +246,7 @@
                     </div>
                     <div (click)="logoBgColor('bg-orange')" class="bg-orange elevation-2 colors-bx-display">
                     </div>
-                    <a href="javascript:void(0)">clear</a>
+                    <a class="clear-button" (click)="clearOptions()" >clear</a>
                 </div>
             </div>
         </aside>

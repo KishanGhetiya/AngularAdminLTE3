@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
   @Output() toggleMenuSidebar: EventEmitter<any> = new EventEmitter<any>();
 
   @ViewChild('sidebar') sidebar: MenuRightSidebarComponent;
+
   // @ViewChild('headerElement', { static: true }) private headerElement: ElementRef;
   // @ViewChild('sidebarRightToggleElement') private sidebarRightToggleElement: ElementRef;
 
