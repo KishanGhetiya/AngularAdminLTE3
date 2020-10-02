@@ -9,7 +9,6 @@ import {
   EventEmitter,
 } from '@angular/core';
 import { AppService } from '../../../../utils/services/app.service';
-// import {LayoutStore} from '../../layout.store';
 // import {removeListeners, removeSubscriptions} from '../../../../utils/services/helpers';
 
 @Component({
@@ -61,15 +60,6 @@ export class MenuRightSidebarComponent implements OnInit {
 
   ngOnInit(): void {
     this.user = this.appService.user;
-    // this.renderer.addClass(this.elementRef.nativeElement, 'control-sidebar');
-
-    // this.subscriptions.push(this.layoutStore.sidebarRightSkin.subscribe((value: string) => {
-    //   if (this.skin !== value) {
-    //     this.renderer.removeClass(this.elementRef.nativeElement, `control-sidebar-${this.skin}`);
-    //   }
-    //   this.skin = value;
-    //   this.renderer.addClass(this.elementRef.nativeElement, `control-sidebar-${value}`);
-    // }));
   }
 
   toggleRightSidebarClick() {
@@ -91,7 +81,7 @@ export class MenuRightSidebarComponent implements OnInit {
   }
 
   bgColor(value: string) {
-    // console.log(this.elementRef.nativeElement.__ngContext__[4]);
+    console.log(this.elementRef.nativeElement.__ngContext__[4]);
       if (this.skin !== value) {
         this.renderer.removeClass(this.elementRef.nativeElement.offsetParent, `${this.skin}`);
       }
